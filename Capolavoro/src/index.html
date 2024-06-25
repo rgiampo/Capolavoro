@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+  <link href="/styles/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hamsterjs/1.1.2/hamster.min.js"></script>
+  <script src="/scripts/InertiaPlugin.js"></script>
+  <script src="/scripts/ScrollTrigger.js"></script>
+  <script src="/scripts/SmoothScroll.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <meta name="description"
+    content="Scopri la Galleria Digitale di Giacomo Leopardi, esplora la bellezza dei luoghi che hanno ispirato le sue opere.">
+  <meta property="og:title" content="Galleria Digitale di Giacomo Leopardi">
+  <meta property="og:description"
+    content="Immergiti nell'universo poetico di Leopardi attraverso una collezione digitale unica.">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'text-primary': '#3a3a3c',
+            'body-bg': '#f4f4ed',
+            'primary': '#6b8e23',
+            'secondary': '#808000',
+            'link': '#556b2f',
+            'highlight': '#ffcc00',
+          },
+          fontFamily: {
+            'sedan': ['Sedan SC', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-body-bg text-text-primary font-sans relative  viewport ">
+  <nav id="navbar" class="w-full bg-primary text-white text-center p-4 fixed top-0 z-50 navbar opacity-0">
+    <ul class="flex justify-center items-center list-none m-0">
+      <li>
+        <h1 class="font-sedan text-3xl" data-aos="fade-down" data-aos-duration="500"></h1>
+      </li>
+    </ul>
+  </nav>
+  <main id="wrapper" class="viewport">
+    <div id="content">
+      <section id="welcome" class="hero relative h-screen flex-center xxx">
+        <video class="video-bg" autoplay muted loop>
+          <source src="/images/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay" id="backgroundVideo"></div>
+        <div class="text-center p-4 z-10 max-w-2xl mx-auto">
+          <h1 class="font-sedan text-5xl mb-5 blend-mode hero" data-aos="fade-down" data-aos-duration="2000"
+            data-aos-delay="100">“Se la felicità non esiste, cos'è dunque la vita?”</h1>
+          <p class="text-lg mb-7 text-white hero" data-aos="fade-in" data-aos-duration="1000"
+            data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="2">Immergiti nell'universo poetico di
+            <span class="highlight">Giacomo
+              Leopardi</span>.</p>
+
+        </div>
+        <div class="scroll-down-indicator">
+          <div class="arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+
+      </section>
+      <section class="xxx" id="carosellino">
+        <div class="slides-container bg-black pc">
+          <div class="slides-inner">
+            <section class="slide flex w-full h-full"> 
+              <article class="w-1/2 h-full "> 
+                <img src="/images/giacomino.jpg" alt="Vesuvio landscape"
+                  class="absolute inset-0 w-full h-full object-cover">
+              </article>
+              <article class="w-1/2 h-full flex items-center justify-start bg-black p-8">
+                <div class="max-w-xl pl-4">
+                  <h2 class="text-5xl font-bold mb-2 text-white" style="font-family: 'Sedan SC', serif;">
+                    Vita di un Poeta
+                  </h2>
+                  <p class="text-xl mb-4 text-white leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Giacomo Leopardi, nato nel 1798 a Recanati, è considerato uno dei più grandi poeti e pensatori
+                    italiani.
+                  </p>
+                  <p class="text-lg italic text-white leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Le sue riflessioni sulla condizione umana e la natura continuano a essere un punto di riferimento
+                    essenziale per studiosi e appassionati. Il suo stile unico e la profonda sensibilità poetica hanno
+                    lasciato un'impronta indelebile, rendendo le sue opere un tesoro nazionale che trascende i confini
+                    temporali e geografici.
+                </div>
+              </article>
+            </section>
+            <section class="slide flex w-full h-full"> 
+              <article class="w-1/2 h-full "> 
+                <img src="/images/Biblioteca-14-2-copia.jpg" alt="Vesuvio landscape"
+                  class="absolute inset-0 w-full h-full object-cover">
+              </article>
+              <article class="w-1/2 h-full flex items-center justify-start bg-black p-8">
+                <div class="max-w-xl pl-4"> 
+                  <h2 class="text-5xl font-bold mb-2 text-white" style="font-family: 'Sedan SC', serif;">
+                    Ove Abitai Fanciullo
+                  </h2>
+                  <p class="text-xl mb-4 text-white leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Dopo oltre due secoli, per la prima volta, Casa Leopardi apre al pubblico i luoghi dell’anima di
+                    Giacomo.
+                  </p>
+                  <p class="text-lg italic text-white leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    “Ove Abitai Fanciullo” è un itinerario di visita che consente l’accesso ai saloni di rappresentanza
+                    del palazzo, alla galleria con le sue collezioni d’arte, al giardino che ispirò gli immortali versi
+                    de
+                    Le ricordanze e agli appartamenti del Poeta.
+                  </p>
+                </div>
+              </article>
+            </section>
+
+            <section class="slide flex w-full h-full">
+              <article class="w-1/2 h-full "> 
+                <img src="/images/vesuvio.jpg" alt="Vesuvio landscape"
+                  class="absolute inset-0 w-full h-full object-cover">
+              </article>
+              <article class="w-1/2 h-full flex items-center justify-start bg-black p-8">
+                <div class="max-w-xl pl-4"> 
+                  <h2 class="text-5xl font-bold mb-2 text-white" style="font-family: 'Sedan SC', serif;">
+                    Gli Ultimi Momenti
+                  </h2>
+                  <p class="text-xl mb-4 text-white leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Giacomo Leopardi trascorse gli ultimi anni della sua vita a Napoli, vicino al maestoso Vesuvio.
+                  </p>
+                  <p class="text-lg italic text-white leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    L'imponente vulcano e il vibrante paesaggio napoletano offrirono nuove ispirazioni poetiche e un
+                    rifugio spirituale per il poeta, influenzando profondamente le sue ultime opere. La presenza del
+                    Vesuvio, simbolo di forza e di mutamento, riflette la continua ricerca di Leopardi per la bellezza e
+                    il significato nel transitorio e nel sublime.
+                  </p>
+                </div>
+              </article>
+            </section>
+
+          </div>
+        </div>
+
+        <div class="mobile">
+          <div class="grid grid-cols-1 md:grid-cols-1">
+            <div class="flex flex-col md:flex-row">
+              <img class="h-auto max-w-full md:w-1/3" src="/images/giacomino.jpg" alt="Vesuvio landscape">
+              <article class="w-full md:w-2/3 flex items-center justify-start bg-black p-10 text-white">
+                <div class="max-w-xl">
+                  <h2 data-aos="fade-left" class="text-4xl font-bold mb-8" style="font-family: 'Sedan SC', serif;">Vita di un Poeta</h2>
+                  <p data-aos="fade-right" data-aos-delay="500" class="text-xl mb-4 leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Giacomo Leopardi, nato nel 1798 a Recanati, è considerato uno dei più grandi poeti e pensatori italiani.
+                  </p>
+                  <p data-aos="fade-left" data-aos-delay="750" class="text-lg italic leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Le sue riflessioni sulla condizione umana e la natura continuano a essere un punto di riferimento essenziale per studiosi e appassionati.
+                    Il suo stile unico e la profonda sensibilità poetica hanno lasciato un'impronta indelebile, rendendo le sue opere un tesoro nazionale che trascende i confini temporali e geografici.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <img class="h-auto max-w-full md:w-1/3" src="/images/IMG_6042-1.jpg" alt="Vesuvio landscape">
+              <article class="w-full md:w-2/3 flex items-center justify-start bg-black p-10 text-white">
+                <div class="max-w-xl">
+                  <h2 data-aos="fade-left" class="text-4xl font-bold mb-8" style="font-family: 'Sedan SC', serif;">Ove Abitai Fanciullo</h2>
+                  <p data-aos="fade-right" data-aos-delay="500" class="text-xl mb-4 leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Dopo oltre due secoli, per la prima volta, Casa Leopardi apre al pubblico i luoghi dell’anima di Giacomo.
+                  </p>
+                  <p data-aos="fade-left" data-aos-delay="750" class="text-lg italic leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    “Ove Abitai Fanciullo” è un itinerario di visita che consente l’accesso ai saloni di rappresentanza del palazzo, alla galleria con le sue collezioni d’arte,
+                    al giardino che ispirò gli immortali versi de Le ricordanze e agli appartamenti del Poeta.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <img class="h-auto max-w-full md:w-1/3" src="/images/vesuvio.jpg" alt="Vesuvio landscape">
+              <article class="w-full md:w-2/3 flex items-center justify-start bg-black p-10 text-white">
+                <div class="max-w-xl">
+                  <h2 data-aos="fade-left" class="text-4xl font-bold mb-8" style="font-family: 'Sedan SC', serif;">Gli Ultimi Momenti</h2>
+                  <p data-aos="fade-right" data-aos-delay="500" class="text-xl mb-4 leading-relaxed" style="font-family: 'Alegreya Sans', sans-serif;">
+                    Giacomo Leopardi trascorse gli ultimi anni della sua vita a Napoli, vicino al maestoso Vesuvio.
+                  </p>
+                  <p data-aos="fade-left" data-aos-delay="750" class="text-lg italic leading-loose" style="font-family: 'Alegreya Sans', sans-serif;">
+                    L'imponente vulcano e il vibrante paesaggio napoletano offrirono nuove ispirazioni poetiche e un rifugio spirituale per il poeta, influenzando profondamente le sue ultime opere.
+                    La presenza del Vesuvio, simbolo di forza e di mutamento, riflette la continua ricerca di Leopardi per la bellezza e il significato nel transitorio e nel sublime.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="xxx parallax-container " id="carosellino ">
+        <img src="/images/mare.jpg" class="background" alt="Descrizione dell'immagine">
+        <div class="foreground">
+          <img src="/images/vesuvionobg.png" class="foreground-image" alt="Descrizione dell'immagine">
+        </div>
+      </div>
+
+      <section class=" py-12 px-4 xxx" id="vita">
+        <div class="max-w-screen-xl mx-auto">
+          <h1 class="text-3xl font-bold text-center mb-8 font-serif">Giacomo Leopardi: Un Genio della Letteratura
+            Italiana</h1>
+          <div class="timeline-content mt-10">
+            <div class="timeline-item" data-year="1798">
+              <span class="year">1798</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Nascita: Inizio del Viaggio: La Giovinezza di
+                  Leopardi</h2>
+                <p>Giacomo Leopardi nasce il 29 giugno 1798 nella piccola città di Recanati, nelle Marche, da una
+                  famiglia nobile ma non particolarmente ricca. La rigida struttura familiare e il clima privo di calore
+                  affettivo sono riflessi nelle sue opere poetiche, cariche di malinconia e riflessioni esistenziali. La
+                  sua educazione, iniziata sotto la guida del padre Monaldo, si concentra sulle lingue classiche e sulle
+                  discipline letterarie. Nonostante le restrizioni familiari, Leopardi sviluppa una straordinaria
+                  erudizione, imparando il greco, il latino, il francese e persino l'ebraico. Questo precoce interesse
+                  per la letteratura e la filosofia pone le fondamenta per il suo futuro come uno dei più grandi poeti e
+                  pensatori italiani.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1812">
+              <span class="year">1812</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Primi studi autodidatti</h2>
+                <p>A soli quattordici anni, Leopardi comincia un imponente percorso di studi autodidatti, utilizzando la
+                  vasta biblioteca paterna. La sua precoce immersione negli studi classici gli permette di acquisire una
+                  profonda conoscenza delle opere di antichi filosofi e poeti, influenzando profondamente il suo stile e
+                  la sua visione del mondo. Questa fase della sua vita è caratterizzata da un intenso impegno
+                  intellettuale, che anticipa la maturazione del suo pensiero filosofico e poetico.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1816">
+              <span class="year">1816</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Le prime pubblicazioni</h2>
+                <p>Con l'arrivo della sua adolescenza, Leopardi inizia a pubblicare i suoi primi componimenti poetici.
+                  Questi primi lavori rivelano già la profondità del suo talento e la sua capacità di esplorare temi
+                  complessi come l'isolamento, l'amore non corrisposto e la natura. Inizia anche a stabilire
+                  corrispondenze con figure letterarie importanti dell'epoca, come Pietro Giordani, che lo incoraggia a
+                  perseguire la sua passione per la scrittura e il pensiero critico.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1817">
+              <span class="year">1817</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">"L'Infinito" e prime riflessioni filosofiche</h2>
+                <p>Il 1817 segna la creazione di "L'Infinito", uno dei poemi più significativi e amati di Leopardi.
+                  Questo poema riflette non solo la sua maestria nella forma e nella lingua, ma anche la profondità del
+                  suo pensiero esistenziale. "L'Infinito" simboleggia la lotta interiore di Leopardi con il concetto di
+                  infinito, che diventerà un tema centrale nel suo lavoro filosofico successivo, contribuendo a definire
+                  il suo posto nella letteratura italiana come innovatore e pensatore profondo.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1819">
+              <span class="year">1819</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">"Canti"</h2>
+                <p>Tra il 1819 e il 1830, Leopardi lavora ai "Canti", una raccolta di poesie che esplorano i temi
+                  dell'amore, della natura, e della condizione umana. Questi componimenti mostrano l'evoluzione del suo
+                  stile poetico e la maturazione della sua visione del mondo, trattando temi di ampio respiro con una
+                  sensibilità che tocca le corde più profonde dell'esistenza umana. Questo periodo è segnato da
+                  un'intensa produzione creativa nonostante le sfide personali e le difficoltà di salute che inizia a
+                  incontrare.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1824">
+              <span class="year">1824</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Crisi personale e filosofica</h2>
+                <p>Nel 1824, Leopardi attraversa una profonda crisi personale e filosofica. Le sue riflessioni su dolore
+                  e disillusione diventano più intense, spesso riflettendo sulla futilità della ricerca della felicità e
+                  sull'inevitabile sofferenza dell'esistenza umana. Questo periodo di introspezione e critica è
+                  fondamentale per la sua evoluzione come filosofo e poeta, influenzando profondamente le opere che
+                  seguiranno.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1828">
+              <span class="year">1828</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Pubblicazione dei "Canti" e il "Zibaldone"</h2>
+                <p>La pubblicazione dei "Canti" nel 1828 rappresenta un momento significativo nella carriera di
+                  Leopardi. Contemporaneamente, lavora al "Zibaldone", un diario di pensieri e riflessioni che offre una
+                  finestra unica sul suo processo creativo e intellettuale. Questi documenti non solo consolidano la sua
+                  reputazione come uno dei leader del pensiero romantico in Italia, ma offrono anche un'analisi incisiva
+                  e personale della condizione umana.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1830">
+              <span class="year">1830</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Viaggio verso Roma e delusione</h2>
+                <p>Il trasferimento a Roma nel 1830 è intrapreso con grandi speranze di trovare un ambiente più
+                  stimolante e liberatorio rispetto a Recanati. Tuttavia, la realtà di Roma, con la sua atmosfera che
+                  Leopardi percepisce come meschina e superficiale, lo delude profondamente. Questa esperienza aumenta
+                  il suo senso di isolamento e alienazione, influenzando le sue opere future con una nota ancora più
+                  marcata di cinismo e disillusione.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1833">
+              <span class="year">1833</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Viaggi nel Nord Italia e ulteriore deterioramento
+                  della salute</h2>
+                <p>Tra il 1833 e il 1836, Leopardi viaggia attraverso il nord Italia, visitando città come Milano,
+                  Bologna, Firenze, e Pisa. Questi viaggi sono motivati dalla ricerca di un ambiente più stimolante e
+                  dalla speranza di migliorare la sua salute deteriorata. Tuttavia, i frequenti spostamenti e le sfide
+                  climatiche aggravano le sue condizioni, soprattutto la vista, rendendo sempre più difficili la lettura
+                  e la scrittura. Nonostante ciò, continua a produrre opere significative, testimoniando la sua
+                  resilienza e dedizione al pensiero e alla poesia.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1836">
+              <span class="year">1836</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Pubblicazione dell'edizione definitiva dei "Canti" e
+                  incontro con Antonio Ranieri</h2>
+                <p>Nel 1836, con l'aiuto del suo caro amico Antonio Ranieri, Leopardi pubblica l'edizione definitiva dei
+                  "Canti" a Napoli. Questa pubblicazione rappresenta il culmine della sua carriera poetica, consolidando
+                  il suo status di uno dei più grandi poeti italiani. L'amicizia con Ranieri si rivela fondamentale,
+                  offrendogli sostegno morale e pratico negli ultimi anni della sua vita.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-year="1837">
+              <span class="year">1837</span>
+              <div class="content">
+                <h2 class="text-2xl font-semibold mb-2 font-serif">Morte</h2>
+                <p>La morte di Leopardi il 14 giugno 1837 a Napoli chiude la vita di un genio letterario, la cui opera
+                  ha profondamente influenzato la letteratura italiana e mondiale. Le sue poesie e i suoi scritti
+                  filosofici continuano a essere studiati e ammirati per la loro profondità di pensiero e la bellezza
+                  della loro espressione linguistica. La sua eredità persiste come simbolo del genio tormentato, la cui
+                  vita e opera esplorano con acume le profondità dell'animo umano e le sfide dell'esistenza.</p>
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+      <section class="py-12 xxx" id="opere">
+        <h1 class="text-5xl font-bold text-center text-gray-900 mb-10 font-sedan">Le opere più note</h1>
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/infinito.webp" alt="L'Infinito" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2">L'Infinito</h2>
+                <p class="text-gray-600 text-sm">Celebre poema che esplora l'ideale dell'infinito.</p>
+                <a href="/src/infinito.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/ginestra.webp" alt="La Ginestra" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2">La Ginestra</h2>
+                <p class="text-gray-600 text-sm">Riflessione sulla condizione umana e sulla natura.</p>
+                <a href="/src/ginestra.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/silvia.webp" alt="A Silvia" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2">A Silvia</h2>
+                <p class="text-gray-600 text-sm">Poesia sui sogni giovanili e la loro perdita.</p>
+                <a href="/src/silvia.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/sabatosera.webp" alt="Il Sabato del Villaggio" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2 ">Il Sabato del Villaggio</h2>
+                <p class="text-gray-600 text-sm">Descrizione dell'anticipazione del giorno festivo.</p>
+                <a href="/src/sabatodelvillaggio.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/ricordanze.webp" alt="Le Ricordanze" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2">Le Ricordanze</h2>
+                <p class="text-gray-600 text-sm">Opera che evoca ricordi nostalgici del passato.</p>
+                <a href="/src/ricordanze.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img src="/images/primoamore.webp" alt="Il Primo Amore" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h2 class="text-2xl text-gray-800 font-semibold mb-2">Il Primo Amore</h2>
+                <p class="text-gray-600 text-sm">Esplorazione delle emozioni del primo amore.</p>
+                <a href="/src/primoamore.html" target="_blank"
+                  class="text-yellow-500 hover:text-yellow-700 font-semibold mt-4 inline-block">Leggi di più »</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="xxx" id="audios">
+        <section class=" py-12">
+          <div class="container mx-auto px-4">
+            <section class="xxx" id="audios">
+              <section class="py-12">
+                <div class="container mx-auto px-4">
+                  <h2 class="text-3xl font-bold mb-6 text-gray-800" style="font-family: 'Sedan SC', serif;">Lettura
+                    Immersiva delle Opere di Leopardi</h2>
+                  <p class="text-lg text-gray-700 mb-4">
+                    Ho trasformato la lettura delle opere di Giacomo Leopardi in un'esperienza immersiva, utilizzando
+                    una DAW professionale e le tecnologie vocali all'avanguardia di ElevenLabs. Questo approccio
+                    permette di catturare con precisione il tono e l'emozione dei testi, riproducendo ogni parola con
+                    una chiarezza sorprendente.
+                  </p>
+                  <p class="text-lg text-gray-700 mb-4">
+                    L'esperienza è arricchita da suoni ambientali immersivi, che variano dalle melodie di sottofondo
+                    fino ai suoni della natura, creando un contesto sonoro che invita all'ascolto profondo e
+                    coinvolgente. Ogni elemento è stato accuratamente selezionato per complementare la poesia e
+                    trasportarti nel cuore emotivo delle opere di Leopardi.
+                  </p>
+                  <p class="text-lg text-gray-700">
+                    Immergiti in questa esperienza sensoriale unica, dove la tecnologia si fonde con la poesia per
+                    offrire un nuovo modo di apprezzare le parole immortali di uno dei più grandi poeti italiani.
+                  </p>
+                </div>
+              </section>
+
+            </section>
+          </div>
+        </section>
+        <div class="container mx-auto my-4 px-10" id="player-container"></div>
+
+      </section>
+      <section id="chat" class="xxx">
+        <div class="chat-container">
+          <div class="chat-header">
+            Chat Bot Informativo
+          </div>
+          <div class="chat-messages" id="chatMessages">
+
+          </div>
+          <div class="input-container">
+            <input type="text" class="input-box" id="userInput" placeholder="Type your Message...">
+            <button class="send-button" id="sendMessage">Send</button>
+          </div>
+        </div>
+      </section>
+  </main>
+  </div>
+  <script src="/scripts/main.js"></script>
+
+</body>
+
+</html>
