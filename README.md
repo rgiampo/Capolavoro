@@ -39,8 +39,4 @@ Una volta avviata la Galleria Digitale di Leopardi localmente, sarà possibile n
 
 Questo progetto è rilasciato sotto la licenza MIT. Consulta il file `LICENSE` per i dettagli completi.
 
-## Supporto
-
-Per domande tecniche o supporto, aprire un issue nel repository GitHub o contattare il team di sviluppo all'indirizzo [inserire email di contatto].
-
 Grazie per aver scelto la Galleria Digitale di Leopardi per la vostra esplorazione digitale!
