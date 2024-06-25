@@ -35,7 +35,9 @@ Una volta avviata la Galleria Digitale di Leopardi localmente, sarà possibile n
 
 ## Licenza
 
-Questo progetto è distribuito sotto la licenza [inserire tipo di licenza qui], che permette l'uso, la modifica e la distribuzione nei limiti specificati dalla stessa.
+# Licenza
+
+Questo progetto è rilasciato sotto la licenza MIT. Consulta il file `LICENSE` per i dettagli completi.
 
 ## Supporto
 
